@@ -1,0 +1,18 @@
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$containerPadding: 30;
+
+$fontFamily: Raleway, sans-serif;
+$fontSize: calc(var(--index) * 0.8);
+$fontWeight: 300;
+$lineHeight: 1.75;
+
+:root {
+	--index: calc(1vw + 1vh);
+	--gutter: 30px;
+	--side-small: 26;
+	--side-big: 36;
+	--depth: 4000px;
+	--transition: 0.75s cubic-bezier(0.01, 0.94, 0.44, 0.9);
+}

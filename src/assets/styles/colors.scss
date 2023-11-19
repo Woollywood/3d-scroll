@@ -1,0 +1,30 @@
+$colors_theme: (
+	'primary': 'white',
+	'secondary': 'black',
+	'text-primary': 'white',
+);
+
+$colors: (
+	'white': #fff,
+	'black': #000,
+);
+
+@function HexToRGB($hex) {
+	@return red($hex), green($hex), blue($hex);
+}
+
+:root {
+	@if $colors {
+		@if $colors_theme {
+			@each $key, $value in $colors_theme {
+				--ui-color-#{$key}: var(--ui-color-#{$value});
+				--ui-color-#{$key}--rgb: var(--ui-color-#{$value}--rgb);
+			}
+		}
+
+		@each $key, $value in $colors {
+			--ui-color-#{$key}: #{$value};
+			--ui-color-#{$key}--rgb: #{HexToRGB($value)};
+		}
+	}
+}

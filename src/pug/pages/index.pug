@@ -1,0 +1,46 @@
+extends ../layout/main.pug
+
+block variables
+	- var title = 'Home';
+	- var pageClass = 'home-page';
+
+block content
+	.frames-container
+		.gallery
+			.frame
+				.frame__content
+					h2 Beautiful World
+			.frame
+				.frame__content
+					.frame__media.frame__media--image.frame__media--left
+						img(src=require('@img/1.jpg') alt="image")
+			.frame.frame-bg
+				.frame__content
+					.frame__media.frame__media--video.frame__media--right
+						video(src=require('@assets/media/video_optimized.mp4') autoplay muted loop)
+			.frame
+				.frame
+					.frame__content
+						.frame__text.frame__text--right
+							h3 Pure Planet
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			.frame.frame-bg
+				.frame__content
+					.frame__media.frame__media--image.frame__media--left
+						img(src=require('@img/3.jpg') alt="image")
+			.frame
+				.frame
+					.frame__content
+						.frame__text.frame__text--left
+							h3 Ask the Mountains
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			.frame.frame-bg
+				.frame__content
+					.frame__media.frame__media--image.frame__media--right
+						img(src=require('@img/2.jpg') alt="image")
+			.frame
+				.frame__content
+					.frame__media.frame__media--image
+						img(src=require('@img/4.jpg') alt="image")
+		img(src=require('@img/sound.gif') alt="sound-icon").sound-button.paused
+		audio(src=require('@assets/media/ambient.mp3') loop).audio
